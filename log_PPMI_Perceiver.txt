@@ -1,0 +1,53 @@
+125
+132
+72
+80
+pd.EHR---> torch.Size([125, 1])
+control.EHR---> torch.Size([132, 1])
+swedd.EHR---> torch.Size([72, 1])
+prodromal.EHR---> torch.Size([80, 1])
+pd.tensor---> torch.Size([125, 1])
+control.tensor---> torch.Size([132, 1])
+swedd.tensor---> torch.Size([72, 1])
+prodromal.tensor---> torch.Size([80, 1])
+PDӰ������: 125
+ControlӰ������: 132
+SWEDDӰ������: 72
+ProdromalӰ������: 80
+PD nii shape---> torch.Size([125, 1])
+control nii shape---> torch.Size([132, 1])
+prodromal nii shape---> torch.Size([80, 1])
+swedd nii shape---> torch.Size([72, 1])
+torch.Size([125, 32])
+torch.Size([132, 32])
+torch.Size([80, 32])
+torch.Size([72, 32])
+Epoch 1/200, Train Loss: 1.4062, Train AUC: 0.5144  test Loss: 1.4004, test AUC: 0.5540
+Epoch 11/200, Train Loss: 1.5026, Train AUC: 0.5392  test Loss: 1.4383, test AUC: 0.7124
+Epoch 21/200, Train Loss: 1.4504, Train AUC: 0.5234  test Loss: 1.4128, test AUC: 0.7671
+Epoch 31/200, Train Loss: 1.3954, Train AUC: 0.5492  test Loss: 1.4076, test AUC: 0.7746
+Epoch 41/200, Train Loss: 1.3966, Train AUC: 0.5818  test Loss: 1.3749, test AUC: 0.7927
+Epoch 51/200, Train Loss: 1.3523, Train AUC: 0.6014  test Loss: 1.3694, test AUC: 0.7938
+Epoch 61/200, Train Loss: 1.3667, Train AUC: 0.5931  test Loss: 1.3375, test AUC: 0.8200
+Epoch 71/200, Train Loss: 1.4043, Train AUC: 0.6089  test Loss: 1.3213, test AUC: 0.8165
+Epoch 81/200, Train Loss: 1.3762, Train AUC: 0.5950  test Loss: 1.3206, test AUC: 0.8193
+Epoch 91/200, Train Loss: 1.3421, Train AUC: 0.6345  test Loss: 1.3175, test AUC: 0.8183
+Epoch 101/200, Train Loss: 1.3563, Train AUC: 0.6730  test Loss: 1.2856, test AUC: 0.8249
+Epoch 111/200, Train Loss: 1.3641, Train AUC: 0.6288  test Loss: 1.2762, test AUC: 0.8313
+Epoch 121/200, Train Loss: 1.3163, Train AUC: 0.6584  test Loss: 1.2613, test AUC: 0.8344
+Epoch 131/200, Train Loss: 1.2757, Train AUC: 0.7095  test Loss: 1.2616, test AUC: 0.8293
+Epoch 141/200, Train Loss: 1.2974, Train AUC: 0.6728  test Loss: 1.2498, test AUC: 0.8365
+Epoch 151/200, Train Loss: 1.2422, Train AUC: 0.7264  test Loss: 1.2226, test AUC: 0.8322
+Epoch 161/200, Train Loss: 1.2247, Train AUC: 0.7140  test Loss: 1.2154, test AUC: 0.8360
+Epoch 171/200, Train Loss: 1.2518, Train AUC: 0.7179  test Loss: 1.1932, test AUC: 0.8365
+Epoch 181/200, Train Loss: 1.2417, Train AUC: 0.7324  test Loss: 1.1955, test AUC: 0.8375
+Epoch 191/200, Train Loss: 1.1637, Train AUC: 0.7741  test Loss: 1.1785, test AUC: 0.8329
+
+=== Final Validation Metrics ===
+Accuracy:  0.5077
+Precision: 0.5493
+Recall:    0.4919
+F1 Score:  0.3968
+AUC-ROC:   0.8805
+
+[PPMI_Perceiver] Done! -> Acc=0.5077 Prec=0.5493 Recall=0.4919 F1=0.3968 AUC=0.8805

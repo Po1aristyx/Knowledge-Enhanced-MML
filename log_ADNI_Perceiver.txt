@@ -1,0 +1,59 @@
+139
+207
+447
+ad.BIO---> (139, 39)
+normal.BIO---> (207, 39)
+mci.BIO---> (447, 39)
+AD_tensor shape: torch.Size([139, 1])
+Normal_tensor shape: torch.Size([207, 1])
+MCI_tensor shape: torch.Size([447, 1])
+ad.EHR---> torch.Size([139, 1])
+normal.EHR---> torch.Size([207, 1])
+mci.EHR---> torch.Size([447, 1])
+ad raw nii tensor shape---> torch.Size([1, 64, 64, 64])
+normal raw nii tensor shape---> torch.Size([1, 64, 64, 64])
+mci raw nii tensor shape---> torch.Size([1, 64, 64, 64])
+ad.BIO---> torch.Size([139, 1])
+normal.BIO---> torch.Size([207, 1])
+mci.BIO---> torch.Size([447, 1])
+ad.EHR---> torch.Size([139, 1])
+normal.EHR---> torch.Size([207, 1])
+mci.EHR---> torch.Size([447, 1])
+ad nii shape---> torch.Size([139, 1])
+normal nii shape---> torch.Size([207, 1])
+mci nii shape---> torch.Size([447, 1])
+Processed 139 valid files.
+Processed 447 valid files.
+Processed 207 valid files.
+ad_transe shape: torch.Size([139, 32])
+mci_transe shape: torch.Size([447, 32])
+normal_transe shape: torch.Size([207, 32])
+Epoch 1/200, Train Loss: 1.1034, Train AUC: 0.5420  test Loss: 1.1172, test AUC: 0.4387
+Epoch 11/200, Train Loss: 1.0828, Train AUC: 0.5570  test Loss: 1.0876, test AUC: 0.4784
+Epoch 21/200, Train Loss: 1.0609, Train AUC: 0.5713  test Loss: 1.0614, test AUC: 0.5156
+Epoch 31/200, Train Loss: 1.0068, Train AUC: 0.6273  test Loss: 1.0393, test AUC: 0.5491
+Epoch 41/200, Train Loss: 1.0045, Train AUC: 0.6202  test Loss: 1.0268, test AUC: 0.5562
+Epoch 51/200, Train Loss: 1.0226, Train AUC: 0.5820  test Loss: 1.0179, test AUC: 0.5715
+Epoch 61/200, Train Loss: 0.9852, Train AUC: 0.6332  test Loss: 1.0074, test AUC: 0.5784
+Epoch 71/200, Train Loss: 0.9880, Train AUC: 0.6045  test Loss: 1.0013, test AUC: 0.5897
+Epoch 81/200, Train Loss: 0.9774, Train AUC: 0.6286  test Loss: 0.9917, test AUC: 0.6051
+Epoch 91/200, Train Loss: 0.9591, Train AUC: 0.6352  test Loss: 0.9840, test AUC: 0.6068
+Epoch 101/200, Train Loss: 0.9613, Train AUC: 0.6302  test Loss: 0.9735, test AUC: 0.6218
+Epoch 111/200, Train Loss: 0.9558, Train AUC: 0.6399  test Loss: 0.9674, test AUC: 0.6338
+Epoch 121/200, Train Loss: 0.9408, Train AUC: 0.6589  test Loss: 0.9608, test AUC: 0.6436
+Epoch 131/200, Train Loss: 0.9142, Train AUC: 0.6777  test Loss: 0.9489, test AUC: 0.6495
+Epoch 141/200, Train Loss: 0.9603, Train AUC: 0.6227  test Loss: 0.9393, test AUC: 0.6669
+Epoch 151/200, Train Loss: 0.9147, Train AUC: 0.6745  test Loss: 0.9345, test AUC: 0.6787
+Epoch 161/200, Train Loss: 0.9171, Train AUC: 0.6727  test Loss: 0.9266, test AUC: 0.6863
+Epoch 171/200, Train Loss: 0.9077, Train AUC: 0.6731  test Loss: 0.9223, test AUC: 0.6984
+Epoch 181/200, Train Loss: 0.9029, Train AUC: 0.6892  test Loss: 0.9150, test AUC: 0.7074
+Epoch 191/200, Train Loss: 0.9161, Train AUC: 0.6657  test Loss: 0.9077, test AUC: 0.7140
+
+=== Final Validation Metrics ===
+Accuracy:  0.6063
+Precision: 0.6072
+Recall:    0.5109
+F1 Score:  0.5359
+AUC-ROC:   0.7732
+
+[ADNI_Perceiver] Done! -> Acc=0.6063 Prec=0.6072 Recall=0.5109 F1=0.5359 AUC=0.7732

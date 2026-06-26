@@ -1,0 +1,20 @@
+72
+358
+86
+ad_output (NII)---> torch.Size([72, 1])
+normal_output (NII)---> torch.Size([358, 1])
+mci_output (NII)---> torch.Size([86, 1])
+ad_EHR---> torch.Size([72, 1])
+normal_EHR---> torch.Size([358, 1])
+mci_EHR---> torch.Size([86, 1])
+ad_tensor (Bio)---> torch.Size([72, 1])
+normal_tensor (Bio)---> torch.Size([358, 1])
+mci_tensor (Bio)---> torch.Size([86, 1])
+ad_transe shape: torch.Size([0, 32])
+mci_transe shape: torch.Size([0, 32])
+normal_transe shape: torch.Size([0, 32])
+Traceback (most recent call last):
+  File "d:\Polaris\Documents\work4\Baseline_CustomKG\Baseline&CustomKG\Baseline\AIBL\AIBL_CustomKG_TransE.py", line 289, in <module>
+    X_ad = torch.cat([ad_EHR, ad_output.cpu(), ad_tensor, ad_transe], dim=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 72 but got size 0 for tensor number 3 in the list.

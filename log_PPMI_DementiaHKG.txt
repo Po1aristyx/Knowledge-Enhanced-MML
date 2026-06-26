@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "d:\Polaris\Documents\work4\DementiaHKG\DementiaHKG\PPMI_DementiaHKG.py", line 9, in <module>
+    from model1 import CNN_3D,NiiDataset,MultiModalTransformer,NeuralNet,TransEModel,KGMultiModalTransformer
+ImportError: cannot import name 'CNN_3D' from 'model1' (unknown location)

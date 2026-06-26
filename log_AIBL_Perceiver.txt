@@ -1,0 +1,44 @@
+72
+358
+86
+ad_output (NII)---> torch.Size([72, 1])
+normal_output (NII)---> torch.Size([358, 1])
+mci_output (NII)---> torch.Size([86, 1])
+ad_EHR---> torch.Size([72, 1])
+normal_EHR---> torch.Size([358, 1])
+mci_EHR---> torch.Size([86, 1])
+ad_tensor (Bio)---> torch.Size([72, 1])
+normal_tensor (Bio)---> torch.Size([358, 1])
+mci_tensor (Bio)---> torch.Size([86, 1])
+ad_transe shape: torch.Size([72, 32])
+mci_transe shape: torch.Size([86, 32])
+normal_transe shape: torch.Size([358, 32])
+Epoch 1/200, Train Loss: 1.1550, Train AUC: 0.4956  test Loss: 1.0469, test AUC: 0.4011
+Epoch 11/200, Train Loss: 1.1363, Train AUC: 0.4657  test Loss: 1.0421, test AUC: 0.3632
+Epoch 21/200, Train Loss: 1.0821, Train AUC: 0.5257  test Loss: 1.0241, test AUC: 0.3948
+Epoch 31/200, Train Loss: 1.0667, Train AUC: 0.5208  test Loss: 1.0014, test AUC: 0.4377
+Epoch 41/200, Train Loss: 1.0691, Train AUC: 0.5002  test Loss: 0.9734, test AUC: 0.4943
+Epoch 51/200, Train Loss: 1.0244, Train AUC: 0.5731  test Loss: 0.9564, test AUC: 0.5615
+Epoch 61/200, Train Loss: 0.9889, Train AUC: 0.5963  test Loss: 0.9318, test AUC: 0.6271
+Epoch 71/200, Train Loss: 0.9646, Train AUC: 0.5974  test Loss: 0.9139, test AUC: 0.7025
+Epoch 81/200, Train Loss: 0.9670, Train AUC: 0.5983  test Loss: 0.8877, test AUC: 0.7480
+Epoch 91/200, Train Loss: 0.9483, Train AUC: 0.6231  test Loss: 0.8634, test AUC: 0.7847
+Epoch 101/200, Train Loss: 0.8829, Train AUC: 0.6963  test Loss: 0.8387, test AUC: 0.8022
+Epoch 111/200, Train Loss: 0.8921, Train AUC: 0.7035  test Loss: 0.8178, test AUC: 0.8353
+Epoch 121/200, Train Loss: 0.8657, Train AUC: 0.7002  test Loss: 0.7939, test AUC: 0.8487
+Epoch 131/200, Train Loss: 0.8338, Train AUC: 0.7621  test Loss: 0.7747, test AUC: 0.8496
+Epoch 141/200, Train Loss: 0.8303, Train AUC: 0.7529  test Loss: 0.7446, test AUC: 0.8506
+Epoch 151/200, Train Loss: 0.8412, Train AUC: 0.6980  test Loss: 0.7265, test AUC: 0.8708
+Epoch 161/200, Train Loss: 0.7995, Train AUC: 0.7533  test Loss: 0.7095, test AUC: 0.8571
+Epoch 171/200, Train Loss: 0.7650, Train AUC: 0.7705  test Loss: 0.6821, test AUC: 0.8678
+Epoch 181/200, Train Loss: 0.7393, Train AUC: 0.8061  test Loss: 0.6617, test AUC: 0.9021
+Epoch 191/200, Train Loss: 0.7353, Train AUC: 0.7864  test Loss: 0.6474, test AUC: 0.9135
+
+=== Final Validation Metrics ===
+Accuracy:  0.8313
+Recall:    0.6667
+F1 Score:  0.6308
+Precision: 0.6019
+AUC-ROC:   0.9607
+
+[AIBL_Perceiver] Done! -> Acc=0.8313 Prec=0.6019 Recall=0.6667 F1=0.6308 AUC=0.9607

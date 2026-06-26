@@ -1,0 +1,89 @@
+
+
+--- Starting Run for PPMI ConvE ---
+125
+132
+72
+80
+PD_array shape: (125, 37)
+control_array shape: (132, 37)
+swedd_array shape: (72, 37)
+prodromal_array shape: (80, 37)
+pd_EHR shape: torch.Size([125, 4])
+control_EHR shape: torch.Size([132, 4])
+swedd_EHR shape: torch.Size([72, 4])
+prodromal_EHR shape: torch.Size([80, 4])
+PD影像数量: 125
+Control影像数量: 132
+SWEDD影像数量: 72
+Prodromal影像数量: 80
+PD Features:   0%|          | 0/8 [00:00<?, ?it/s]PD Features:  12%|█▎        | 1/8 [00:01<00:11,  1.70s/it]PD Features:  25%|██▌       | 2/8 [00:03<00:09,  1.66s/it]PD Features:  38%|███▊      | 3/8 [00:04<00:08,  1.63s/it]PD Features:  50%|█████     | 4/8 [00:06<00:06,  1.65s/it]PD Features:  62%|██████▎   | 5/8 [00:08<00:05,  1.73s/it]PD Features:  75%|███████▌  | 6/8 [00:10<00:03,  1.78s/it]PD Features:  88%|████████▊ | 7/8 [00:11<00:01,  1.72s/it]PD Features: 100%|██████████| 8/8 [00:13<00:00,  1.66s/it]PD Features: 100%|██████████| 8/8 [00:13<00:00,  1.69s/it]
+PD nii shape---> torch.Size([125, 64])
+Control Features:   0%|          | 0/9 [00:00<?, ?it/s]Control Features:  11%|█         | 1/9 [00:01<00:14,  1.83s/it]Control Features:  22%|██▏       | 2/9 [00:03<00:12,  1.76s/it]Control Features:  33%|███▎      | 3/9 [00:05<00:10,  1.70s/it]Control Features:  44%|████▍     | 4/9 [00:07<00:08,  1.79s/it]Control Features:  56%|█████▌    | 5/9 [00:08<00:07,  1.82s/it]Control Features:  67%|██████▋   | 6/9 [00:10<00:05,  1.75s/it]Control Features:  78%|███████▊  | 7/9 [00:12<00:03,  1.73s/it]Control Features:  89%|████████▉ | 8/9 [00:14<00:01,  1.83s/it]Control Features: 100%|██████████| 9/9 [00:14<00:00,  1.40s/it]Control Features: 100%|██████████| 9/9 [00:14<00:00,  1.64s/it]
+control nii shape---> torch.Size([132, 64])
+Prodromal Features:   0%|          | 0/5 [00:00<?, ?it/s]Prodromal Features:  20%|██        | 1/5 [00:01<00:07,  1.99s/it]Prodromal Features:  40%|████      | 2/5 [00:03<00:05,  1.81s/it]Prodromal Features:  60%|██████    | 3/5 [00:05<00:03,  1.72s/it]Prodromal Features:  80%|████████  | 4/5 [00:07<00:01,  1.82s/it]Prodromal Features: 100%|██████████| 5/5 [00:09<00:00,  1.80s/it]Prodromal Features: 100%|██████████| 5/5 [00:09<00:00,  1.81s/it]
+prodromal nii shape---> torch.Size([80, 64])
+SWEDD Features:   0%|          | 0/5 [00:00<?, ?it/s]SWEDD Features:  20%|██        | 1/5 [00:01<00:07,  1.85s/it]SWEDD Features:  40%|████      | 2/5 [00:03<00:05,  1.74s/it]SWEDD Features:  60%|██████    | 3/5 [00:05<00:03,  1.71s/it]SWEDD Features:  80%|████████  | 4/5 [00:07<00:01,  1.81s/it]SWEDD Features: 100%|██████████| 5/5 [00:08<00:00,  1.49s/it]SWEDD Features: 100%|██████████| 5/5 [00:08<00:00,  1.61s/it]
+swedd nii shape---> torch.Size([72, 64])
+开始提取PPMI知识序列与注意力掩码...
+[E:/code/dazuoyecode/PPMI/PD] 总样本数: 125 | 成功注入KG序列的样本数: 125
+[E:/code/dazuoyecode/PPMI/Control] 总样本数: 132 | 成功注入KG序列的样本数: 132
+[Prodromal] 总样本数: 80 | 成功注入KG序列的样本数: 80
+[E:/code/dazuoyecode/PPMI/SWEDD] 总样本数: 72 | 成功注入KG序列的样本数: 72
+最终生成的知识序列 Shapes: torch.Size([125, 35, 128]) torch.Size([132, 35, 128]) torch.Size([80, 35, 128]) torch.Size([72, 35, 128])
+最终生成的掩码张量 Shapes: torch.Size([125, 35]) torch.Size([132, 35]) torch.Size([80, 35]) torch.Size([72, 35])
+DataLoaders ready: 9 3 3
+Epoch 1/200, Train Loss: 1.5015, Train AUC: 0.5007  test Loss: 1.3973, test AUC: 0.5833
+Epoch 11/200, Train Loss: 1.4291, Train AUC: 0.5587  test Loss: 1.4359, test AUC: 0.4988
+Epoch 21/200, Train Loss: 1.3691, Train AUC: 0.5912  test Loss: 1.3744, test AUC: 0.5600
+Epoch 31/200, Train Loss: 1.3287, Train AUC: 0.6281  test Loss: 1.3435, test AUC: 0.5858
+Epoch 41/200, Train Loss: 1.3146, Train AUC: 0.6811  test Loss: 1.3274, test AUC: 0.6126
+Epoch 51/200, Train Loss: 1.2692, Train AUC: 0.6861  test Loss: 1.2910, test AUC: 0.6554
+Epoch 61/200, Train Loss: 1.2920, Train AUC: 0.6859  test Loss: 1.2641, test AUC: 0.6771
+Epoch 71/200, Train Loss: 1.2047, Train AUC: 0.7138  test Loss: 1.2212, test AUC: 0.7047
+Epoch 81/200, Train Loss: 1.2524, Train AUC: 0.6996  test Loss: 1.2146, test AUC: 0.7111
+Epoch 91/200, Train Loss: 1.2168, Train AUC: 0.7349  test Loss: 1.2069, test AUC: 0.7107
+Epoch 101/200, Train Loss: 1.2462, Train AUC: 0.7304  test Loss: 1.1694, test AUC: 0.7366
+Epoch 111/200, Train Loss: 1.1965, Train AUC: 0.7462  test Loss: 1.1627, test AUC: 0.7335
+Epoch 121/200, Train Loss: 1.1781, Train AUC: 0.7760  test Loss: 1.1529, test AUC: 0.7468
+Epoch 131/200, Train Loss: 1.1650, Train AUC: 0.7937  test Loss: 1.1082, test AUC: 0.7634
+Epoch 141/200, Train Loss: 1.1431, Train AUC: 0.7629  test Loss: 1.0956, test AUC: 0.7688
+Epoch 151/200, Train Loss: 1.0978, Train AUC: 0.7936  test Loss: 1.0908, test AUC: 0.7494
+Epoch 161/200, Train Loss: 1.1355, Train AUC: 0.7884  test Loss: 1.0814, test AUC: 0.7575
+Epoch 171/200, Train Loss: 1.0772, Train AUC: 0.7995  test Loss: 1.0323, test AUC: 0.7889
+Epoch 181/200, Train Loss: 1.0340, Train AUC: 0.8278  test Loss: 1.0419, test AUC: 0.7908
+Epoch 191/200, Train Loss: 1.0865, Train AUC: 0.8102  test Loss: 1.0260, test AUC: 0.7895
+
+=== Final Validation Metrics ===
+Accuracy:  0.5692
+Precision: 0.5079
+Recall:    0.5113
+F1 Score:  0.5013
+AUC-ROC:   0.7735
+Traceback (most recent call last):
+  File "d:\Polaris\Documents\work4\DementiaHKG\DementiaHKG\PPMI_ConvE.py", line 652, in <module>
+    flops_trans, params_trans = profile(model_transformer, inputs=(dummy_x, dummy_kg_seq, dummy_kg_mask), verbose=False)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\audiokeshe\Lib\site-packages\thop\profile.py", line 212, in profile
+    model(*inputs)
+  File "D:\anaconda3\envs\audiokeshe\Lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\audiokeshe\Lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Polaris\Documents\work4\Baseline_CustomKG\Baseline&CustomKG\Baseline\ADNI\model1.py", line 732, in forward
+    ehr_kg_out, _ = self.ehr_kg_attn(query=ehr_feat, key=kg_feat, value=kg_feat, key_padding_mask=kg_mask)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\audiokeshe\Lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\audiokeshe\Lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\audiokeshe\Lib\site-packages\torch\nn\modules\activation.py", line 1215, in forward
+    key_padding_mask = F._canonical_mask(
+                       ^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\audiokeshe\Lib\site-packages\torch\nn\functional.py", line 5844, in _canonical_mask
+    raise AssertionError(
+AssertionError: only bool and floating types of key_padding_mask are supported

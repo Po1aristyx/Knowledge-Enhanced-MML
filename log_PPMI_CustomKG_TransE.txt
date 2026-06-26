@@ -1,0 +1,29 @@
+125
+132
+72
+80
+pd.EHR---> torch.Size([125, 1])
+control.EHR---> torch.Size([132, 1])
+swedd.EHR---> torch.Size([72, 1])
+prodromal.EHR---> torch.Size([80, 1])
+pd.tensor---> torch.Size([125, 1])
+control.tensor---> torch.Size([132, 1])
+swedd.tensor---> torch.Size([72, 1])
+prodromal.tensor---> torch.Size([80, 1])
+PDӰ: 125
+ControlӰ: 132
+SWEDDӰ: 72
+ProdromalӰ: 80
+PD nii shape---> torch.Size([125, 1])
+control nii shape---> torch.Size([132, 1])
+prodromal nii shape---> torch.Size([80, 1])
+swedd nii shape---> torch.Size([72, 1])
+torch.Size([0, 32])
+torch.Size([0, 32])
+torch.Size([0, 32])
+torch.Size([0, 32])
+Traceback (most recent call last):
+  File "d:\Polaris\Documents\work4\Baseline_CustomKG\Baseline&CustomKG\Baseline\PPMI\PPMI_CustomKG_TransE.py", line 359, in <module>
+    X_pd = torch.cat([pd_EHR, PD_output.cpu(), pd_tensor,pd_transe], dim=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 125 but got size 0 for tensor number 3 in the list.

@@ -1,0 +1,35 @@
+713
+2116
+879
+torch.Size([713, 81])
+AD_tensor shape: torch.Size([713, 1])
+Normal_tensor shape: torch.Size([2116, 1])
+MCI_tensor shape: torch.Size([879, 1])
+ad.EHR---> torch.Size([713, 1])
+normal.EHR---> torch.Size([2116, 1])
+mci.EHR---> torch.Size([879, 1])
+ad nii shape---> torch.Size([713, 1])
+normal nii shape---> torch.Size([2116, 1])
+mci nii shape---> torch.Size([879, 1])
+ad_transe shape: torch.Size([713, 32])
+mci_transe shape: torch.Size([879, 32])
+normal_transe shape: torch.Size([2116, 32])
+Epoch 1/100, Train Loss: 1.1396, Train AUC: 0.3946  test Loss: 1.0824, test AUC: 0.3542
+Epoch 11/100, Train Loss: 0.6533, Train AUC: 0.9144  test Loss: 0.6293, test AUC: 0.9193
+Epoch 21/100, Train Loss: 0.5479, Train AUC: 0.9229  test Loss: 0.5409, test AUC: 0.9246
+Epoch 31/100, Train Loss: 0.5113, Train AUC: 0.9243  test Loss: 0.4883, test AUC: 0.9185
+Epoch 41/100, Train Loss: 0.4917, Train AUC: 0.9232  test Loss: 0.4808, test AUC: 0.9207
+Epoch 51/100, Train Loss: 0.4787, Train AUC: 0.9249  test Loss: 0.4645, test AUC: 0.9200
+Epoch 61/100, Train Loss: 0.4680, Train AUC: 0.9266  test Loss: 0.4554, test AUC: 0.9179
+Epoch 71/100, Train Loss: 0.4638, Train AUC: 0.9274  test Loss: 0.4559, test AUC: 0.9218
+Epoch 81/100, Train Loss: 0.4513, Train AUC: 0.9283  test Loss: 0.4524, test AUC: 0.9179
+Epoch 91/100, Train Loss: 0.4505, Train AUC: 0.9280  test Loss: 0.4519, test AUC: 0.9207
+
+=== Final Validation Metrics ===
+Accuracy:  0.7929
+Recall:    0.7436
+F1 Score:  0.7416
+Precision: 0.7422
+AUC-ROC:   0.9237
+
+[NACC_CustomKG_TransE] Done! -> Acc=0.7929 Prec=0.7422 Recall=0.7436 F1=0.7416 AUC=0.9237

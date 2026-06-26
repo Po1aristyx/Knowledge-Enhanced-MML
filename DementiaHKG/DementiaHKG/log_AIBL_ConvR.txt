@@ -1,0 +1,204 @@
+
+
+--- Starting Run for AIBL ConvR ---
+72
+358
+86
+AD_tensor shape: torch.Size([72, 5])
+Normal_tensor shape: torch.Size([358, 5])
+MCI_tensor shape: torch.Size([86, 5])
+ad.EHR---> torch.Size([72, 2])
+normal.EHR---> torch.Size([358, 2])
+mci.EHR---> torch.Size([86, 2])
+ad nii shape---> torch.Size([72, 64])
+normal nii shape---> torch.Size([358, 64])
+mci nii shape---> torch.Size([86, 64])
+开始提取AIBL完整知识序列与注意力掩码...
+[AD] 总样本数: 72 | 成功注入KG先验序列的样本数: 72
+[MCI] 总样本数: 86 | 成功注入KG先验序列的样本数: 86
+[NC] 总样本数: 358 | 成功注入KG先验序列的样本数: 358
+--------------------------------------------------
+最终生成的知识序列 Shapes: torch.Size([72, 16, 128]) torch.Size([86, 16, 128]) torch.Size([358, 16, 128])
+最终生成的掩码张量 Shapes: torch.Size([72, 16]) torch.Size([86, 16]) torch.Size([358, 16])
+数据准备完毕！Train: 329 Val: 83 Test: 104
+Epoch 1/200, Train Loss: 1.2312, Train AUC: 0.4735  Test Loss: 1.0826, Test AUC: 0.5144
+Epoch 11/200, Train Loss: 1.1227, Train AUC: 0.5488  Test Loss: 1.1268, Test AUC: 0.5694
+Epoch 21/200, Train Loss: 1.0969, Train AUC: 0.5601  Test Loss: 1.0599, Test AUC: 0.6073
+Epoch 31/200, Train Loss: 1.0489, Train AUC: 0.6279  Test Loss: 1.0129, Test AUC: 0.6517
+Epoch 41/200, Train Loss: 1.0000, Train AUC: 0.6966  Test Loss: 0.9483, Test AUC: 0.7081
+Epoch 51/200, Train Loss: 0.9495, Train AUC: 0.7247  Test Loss: 0.9140, Test AUC: 0.7356
+Epoch 61/200, Train Loss: 0.9284, Train AUC: 0.7322  Test Loss: 0.8470, Test AUC: 0.7748
+Epoch 71/200, Train Loss: 0.8455, Train AUC: 0.7809  Test Loss: 0.7753, Test AUC: 0.7929
+Epoch 81/200, Train Loss: 0.8343, Train AUC: 0.7988  Test Loss: 0.7552, Test AUC: 0.8069
+Epoch 91/200, Train Loss: 0.7785, Train AUC: 0.8523  Test Loss: 0.7274, Test AUC: 0.8219
+Epoch 101/200, Train Loss: 0.7419, Train AUC: 0.8599  Test Loss: 0.6881, Test AUC: 0.8251
+Epoch 111/200, Train Loss: 0.7067, Train AUC: 0.8726  Test Loss: 0.6284, Test AUC: 0.8309
+Epoch 121/200, Train Loss: 0.6508, Train AUC: 0.8878  Test Loss: 0.6169, Test AUC: 0.8375
+Epoch 131/200, Train Loss: 0.6227, Train AUC: 0.8844  Test Loss: 0.5823, Test AUC: 0.8403
+Epoch 141/200, Train Loss: 0.5991, Train AUC: 0.8915  Test Loss: 0.5824, Test AUC: 0.8445
+Epoch 151/200, Train Loss: 0.6341, Train AUC: 0.8845  Test Loss: 0.5461, Test AUC: 0.8441
+Epoch 161/200, Train Loss: 0.5784, Train AUC: 0.8927  Test Loss: 0.5317, Test AUC: 0.8464
+Epoch 171/200, Train Loss: 0.5937, Train AUC: 0.9068  Test Loss: 0.5268, Test AUC: 0.8618
+Epoch 181/200, Train Loss: 0.5645, Train AUC: 0.9095  Test Loss: 0.5047, Test AUC: 0.8582
+Epoch 191/200, Train Loss: 0.5735, Train AUC: 0.8888  Test Loss: 0.5015, Test AUC: 0.8500
+
+=== Final Validation Metrics ===
+Accuracy:  0.8072
+Recall:    0.6783
+F1 Score:  0.6745
+Precision: 0.6784
+AUC-ROC:   0.8303
+============================================================================================================================================
+Layer (type:depth-idx)                   Input Shape               Output Shape              Param #                   Trainable
+============================================================================================================================================
+KGMultiModalTransformer                  [32, 71]                  [32, 3]                   --                        True
+├─Sequential: 1-1                        [32, 2]                   [32, 128]                 --                        True
+│    └─Linear: 2-1                       [32, 2]                   [32, 16]                  48                        True
+│    └─BatchNorm1d: 2-2                  [32, 16]                  [32, 16]                  32                        True
+│    └─ReLU: 2-3                         [32, 16]                  [32, 16]                  --                        --
+│    └─Dropout: 2-4                      [32, 16]                  [32, 16]                  --                        --
+│    └─Linear: 2-5                       [32, 16]                  [32, 128]                 2,176                     True
+│    └─BatchNorm1d: 2-6                  [32, 128]                 [32, 128]                 256                       True
+│    └─ReLU: 2-7                         [32, 128]                 [32, 128]                 --                        --
+├─Sequential: 1-2                        [32, 64]                  [32, 128]                 --                        True
+│    └─Linear: 2-8                       [32, 64]                  [32, 32]                  2,080                     True
+│    └─BatchNorm1d: 2-9                  [32, 32]                  [32, 32]                  64                        True
+│    └─ReLU: 2-10                        [32, 32]                  [32, 32]                  --                        --
+│    └─Dropout: 2-11                     [32, 32]                  [32, 32]                  --                        --
+│    └─Linear: 2-12                      [32, 32]                  [32, 128]                 4,224                     True
+│    └─BatchNorm1d: 2-13                 [32, 128]                 [32, 128]                 256                       True
+│    └─ReLU: 2-14                        [32, 128]                 [32, 128]                 --                        --
+├─Sequential: 1-3                        [32, 5]                   [32, 128]                 --                        True
+│    └─Linear: 2-15                      [32, 5]                   [32, 32]                  192                       True
+│    └─BatchNorm1d: 2-16                 [32, 32]                  [32, 32]                  64                        True
+│    └─ReLU: 2-17                        [32, 32]                  [32, 32]                  --                        --
+│    └─Dropout: 2-18                     [32, 32]                  [32, 32]                  --                        --
+│    └─Linear: 2-19                      [32, 32]                  [32, 16]                  528                       True
+│    └─BatchNorm1d: 2-20                 [32, 16]                  [32, 16]                  32                        True
+│    └─ReLU: 2-21                        [32, 16]                  [32, 16]                  --                        --
+│    └─Dropout: 2-22                     [32, 16]                  [32, 16]                  --                        --
+│    └─Linear: 2-23                      [32, 16]                  [32, 128]                 2,176                     True
+│    └─BatchNorm1d: 2-24                 [32, 128]                 [32, 128]                 256                       True
+│    └─ReLU: 2-25                        [32, 128]                 [32, 128]                 --                        --
+├─Sequential: 1-4                        [32, 16, 128]             [32, 16, 128]             --                        True
+│    └─Linear: 2-26                      [32, 16, 128]             [32, 16, 64]              8,256                     True
+│    └─ReLU: 2-27                        [32, 16, 64]              [32, 16, 64]              --                        --
+│    └─Dropout: 2-28                     [32, 16, 64]              [32, 16, 64]              --                        --
+│    └─Linear: 2-29                      [32, 16, 64]              [32, 16, 128]             8,320                     True
+├─MultiheadAttention: 1-5                --                        [32, 1, 128]              66,048                    True
+├─MultiheadAttention: 1-6                --                        [32, 1, 128]              66,048                    True
+├─MultiheadAttention: 1-7                --                        [32, 1, 128]              66,048                    True
+├─LayerNorm: 1-8                         [32, 1, 128]              [32, 1, 128]              256                       True
+├─LayerNorm: 1-9                         [32, 1, 128]              [32, 1, 128]              256                       True
+├─LayerNorm: 1-10                        [32, 1, 128]              [32, 1, 128]              256                       True
+├─Linear: 1-11                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─Linear: 1-12                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─Linear: 1-13                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─Linear: 1-14                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─Linear: 1-15                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─Linear: 1-16                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─MultiheadAttention: 1-17               --                        [32, 1, 128]              66,048                    True
+├─MultiheadAttention: 1-18               --                        [32, 1, 128]              (recursive)               True
+├─LayerNorm: 1-19                        [32, 1, 128]              [32, 1, 128]              256                       True
+├─LayerNorm: 1-20                        [32, 1, 128]              [32, 1, 128]              256                       True
+├─Sequential: 1-21                       [32, 256]                 [32, 128]                 --                        True
+│    └─Linear: 2-30                      [32, 256]                 [32, 128]                 32,896                    True
+│    └─ReLU: 2-31                        [32, 128]                 [32, 128]                 --                        --
+│    └─Dropout: 2-32                     [32, 128]                 [32, 128]                 --                        --
+├─Linear: 1-22                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─MultiheadAttention: 1-23               --                        [32, 1, 128]              (recursive)               True
+├─LayerNorm: 1-24                        [32, 1, 128]              [32, 1, 128]              256                       True
+├─Sequential: 1-25                       [32, 256]                 [32, 3]                   --                        True
+│    └─Linear: 2-33                      [32, 256]                 [32, 64]                  16,448                    True
+│    └─BatchNorm1d: 2-34                 [32, 64]                  [32, 64]                  128                       True
+│    └─ReLU: 2-35                        [32, 64]                  [32, 64]                  --                        --
+│    └─Dropout: 2-36                     [32, 64]                  [32, 64]                  --                        --
+│    └─Linear: 2-37                      [32, 64]                  [32, 3]                   195                       True
+============================================================================================================================================
+Total params: 459,939
+Trainable params: 459,939
+Non-trainable params: 0
+Total mult-adds (Units.MEGABYTES): 6.26
+============================================================================================================================================
+Input size (MB): 0.27
+Forward/backward pass size (MB): 1.52
+Params size (MB): 0.78
+Estimated Total Size (MB): 2.58
+============================================================================================================================================
+============================================================================================================================================
+Layer (type:depth-idx)                   Input Shape               Output Shape              Param #                   Trainable
+============================================================================================================================================
+KGMultiModalTransformer                  [32, 71]                  [32, 3]                   --                        True
+├─Sequential: 1-1                        [32, 2]                   [32, 128]                 --                        True
+│    └─Linear: 2-1                       [32, 2]                   [32, 16]                  48                        True
+│    └─BatchNorm1d: 2-2                  [32, 16]                  [32, 16]                  32                        True
+│    └─ReLU: 2-3                         [32, 16]                  [32, 16]                  --                        --
+│    └─Dropout: 2-4                      [32, 16]                  [32, 16]                  --                        --
+│    └─Linear: 2-5                       [32, 16]                  [32, 128]                 2,176                     True
+│    └─BatchNorm1d: 2-6                  [32, 128]                 [32, 128]                 256                       True
+│    └─ReLU: 2-7                         [32, 128]                 [32, 128]                 --                        --
+├─Sequential: 1-2                        [32, 64]                  [32, 128]                 --                        True
+│    └─Linear: 2-8                       [32, 64]                  [32, 32]                  2,080                     True
+│    └─BatchNorm1d: 2-9                  [32, 32]                  [32, 32]                  64                        True
+│    └─ReLU: 2-10                        [32, 32]                  [32, 32]                  --                        --
+│    └─Dropout: 2-11                     [32, 32]                  [32, 32]                  --                        --
+│    └─Linear: 2-12                      [32, 32]                  [32, 128]                 4,224                     True
+│    └─BatchNorm1d: 2-13                 [32, 128]                 [32, 128]                 256                       True
+│    └─ReLU: 2-14                        [32, 128]                 [32, 128]                 --                        --
+├─Sequential: 1-3                        [32, 5]                   [32, 128]                 --                        True
+│    └─Linear: 2-15                      [32, 5]                   [32, 32]                  192                       True
+│    └─BatchNorm1d: 2-16                 [32, 32]                  [32, 32]                  64                        True
+│    └─ReLU: 2-17                        [32, 32]                  [32, 32]                  --                        --
+│    └─Dropout: 2-18                     [32, 32]                  [32, 32]                  --                        --
+│    └─Linear: 2-19                      [32, 32]                  [32, 16]                  528                       True
+│    └─BatchNorm1d: 2-20                 [32, 16]                  [32, 16]                  32                        True
+│    └─ReLU: 2-21                        [32, 16]                  [32, 16]                  --                        --
+│    └─Dropout: 2-22                     [32, 16]                  [32, 16]                  --                        --
+│    └─Linear: 2-23                      [32, 16]                  [32, 128]                 2,176                     True
+│    └─BatchNorm1d: 2-24                 [32, 128]                 [32, 128]                 256                       True
+│    └─ReLU: 2-25                        [32, 128]                 [32, 128]                 --                        --
+├─Sequential: 1-4                        [32, 16, 128]             [32, 16, 128]             --                        True
+│    └─Linear: 2-26                      [32, 16, 128]             [32, 16, 64]              8,256                     True
+│    └─ReLU: 2-27                        [32, 16, 64]              [32, 16, 64]              --                        --
+│    └─Dropout: 2-28                     [32, 16, 64]              [32, 16, 64]              --                        --
+│    └─Linear: 2-29                      [32, 16, 64]              [32, 16, 128]             8,320                     True
+├─MultiheadAttention: 1-5                --                        [32, 1, 128]              66,048                    True
+├─MultiheadAttention: 1-6                --                        [32, 1, 128]              66,048                    True
+├─MultiheadAttention: 1-7                --                        [32, 1, 128]              66,048                    True
+├─LayerNorm: 1-8                         [32, 1, 128]              [32, 1, 128]              256                       True
+├─LayerNorm: 1-9                         [32, 1, 128]              [32, 1, 128]              256                       True
+├─LayerNorm: 1-10                        [32, 1, 128]              [32, 1, 128]              256                       True
+├─Linear: 1-11                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─Linear: 1-12                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─Linear: 1-13                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─Linear: 1-14                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─Linear: 1-15                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─Linear: 1-16                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─MultiheadAttention: 1-17               --                        [32, 1, 128]              66,048                    True
+├─MultiheadAttention: 1-18               --                        [32, 1, 128]              (recursive)               True
+├─LayerNorm: 1-19                        [32, 1, 128]              [32, 1, 128]              256                       True
+├─LayerNorm: 1-20                        [32, 1, 128]              [32, 1, 128]              256                       True
+├─Sequential: 1-21                       [32, 256]                 [32, 128]                 --                        True
+│    └─Linear: 2-30                      [32, 256]                 [32, 128]                 32,896                    True
+│    └─ReLU: 2-31                        [32, 128]                 [32, 128]                 --                        --
+│    └─Dropout: 2-32                     [32, 128]                 [32, 128]                 --                        --
+├─Linear: 1-22                           [32, 1, 128]              [32, 1, 128]              16,512                    True
+├─MultiheadAttention: 1-23               --                        [32, 1, 128]              (recursive)               True
+├─LayerNorm: 1-24                        [32, 1, 128]              [32, 1, 128]              256                       True
+├─Sequential: 1-25                       [32, 256]                 [32, 3]                   --                        True
+│    └─Linear: 2-33                      [32, 256]                 [32, 64]                  16,448                    True
+│    └─BatchNorm1d: 2-34                 [32, 64]                  [32, 64]                  128                       True
+│    └─ReLU: 2-35                        [32, 64]                  [32, 64]                  --                        --
+│    └─Dropout: 2-36                     [32, 64]                  [32, 64]                  --                        --
+│    └─Linear: 2-37                      [32, 64]                  [32, 3]                   195                       True
+============================================================================================================================================
+Total params: 459,939
+Trainable params: 459,939
+Non-trainable params: 0
+Total mult-adds (Units.MEGABYTES): 6.26
+============================================================================================================================================
+Input size (MB): 0.27
+Forward/backward pass size (MB): 1.52
+Params size (MB): 0.78
+Estimated Total Size (MB): 2.58
+============================================================================================================================================

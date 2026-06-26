@@ -1,0 +1,32 @@
+139
+207
+447
+ad.BIO---> (139, 39)
+normal.BIO---> (207, 39)
+mci.BIO---> (447, 39)
+AD_tensor shape: torch.Size([139, 1])
+Normal_tensor shape: torch.Size([207, 1])
+MCI_tensor shape: torch.Size([447, 1])
+ad.EHR---> torch.Size([139, 1])
+normal.EHR---> torch.Size([207, 1])
+mci.EHR---> torch.Size([447, 1])
+ad raw nii tensor shape---> torch.Size([1, 64, 64, 64])
+normal raw nii tensor shape---> torch.Size([1, 64, 64, 64])
+mci raw nii tensor shape---> torch.Size([1, 64, 64, 64])
+ad.BIO---> torch.Size([139, 1])
+normal.BIO---> torch.Size([207, 1])
+mci.BIO---> torch.Size([447, 1])
+ad.EHR---> torch.Size([139, 1])
+normal.EHR---> torch.Size([207, 1])
+mci.EHR---> torch.Size([447, 1])
+ad nii shape---> torch.Size([139, 1])
+normal nii shape---> torch.Size([207, 1])
+mci nii shape---> torch.Size([447, 1])
+ad_transe shape: torch.Size([0, 32])
+mci_transe shape: torch.Size([0, 32])
+normal_transe shape: torch.Size([0, 32])
+Traceback (most recent call last):
+  File "d:\Polaris\Documents\work4\Baseline_CustomKG\Baseline&CustomKG\Baseline\ADNI\ADNI_CustomKG_TransE.py", line 352, in <module>
+    X_ad = torch.cat([ad_EHR, ad_output.cpu(), ad_tensor, ad_transe], dim=1)  # [batch_size_ad, EHR_dim + output_dim + tensor_dim + transe_embed_dim]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 139 but got size 0 for tensor number 3 in the list.
