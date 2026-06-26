@@ -49,7 +49,7 @@ python generate_figures.py
 本项目在进行 KGE 以及多模态 Transformer 训练时，引入了自动 Checkpointing 机制：每隔 10 epoch 会自动在 `checkpoints/` 目录下保存模型。若遭遇意外终端或人为停止，再次运行原有脚本即可全自动从断点继续执行，不会造成重复训练。
 
 ## 相关数据集与模型资产下载
-本项目所需的数据集和模型压缩包已托管至 Zenodo，可直接点击以下链接进行下载：
+本项目所需的数据集和模型压缩包可以在 Zenodo下载，可直接点击以下链接进行下载：
 *   **多模态数据集**: [https://zenodo.org/records/19646995](https://zenodo.org/records/19646995) (总结神经影像 MRI、电子健康记录 EHR、生物标志物 BioMarker 三种数据模态，用于进行联合学习以支持辅助诊断任务)
 *   **Baseline常规型方案**: [https://zenodo.org/records/19652263](https://zenodo.org/records/19652263)
 *   **集成外部知识库的DemRKG方法**: [https://zenodo.org/records/19652297](https://zenodo.org/records/19652297) (试图在私域知识提取基础上，通过领域知识蒸馏和精炼的方式，进一步提升有效性)
